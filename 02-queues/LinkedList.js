@@ -71,8 +71,14 @@ class LinkedList {
 
         }
     }
+
     getAt(index) {
-        let current = head;
+
+        if (this.head==null) {
+            return null;
+        }
+
+        let current = this.head;
         for (let i = 0; i < index; i++) {
             current = current.getNext();
         }
